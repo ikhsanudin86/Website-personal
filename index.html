@@ -33,8 +33,8 @@
             <a href="#contact">Kontak</a>
         </div>
         <div class="navbar-extra">
-            <a href="#" id="search-botton"><i data-feather="search"></i></a>
-            <a href="#" id="shopping-cart-botton"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
         <!-- form search start -->
@@ -150,7 +150,7 @@
             <div class="product-card">
                 <div class="product-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
                 </div>
                 <div class="product-image">
                     <img src="img/1.jpg" alt="product1">
@@ -171,7 +171,7 @@
             <div class="product-card">
                 <div class="product-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
                 </div>
                 <div class="product-image">
                     <img src="img/1.jpg" alt="product1">
@@ -192,7 +192,7 @@
             <div class="product-card">
                 <div class="product-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
                 </div>
                 <div class="product-image">
                     <img src="img/1.jpg" alt="product1">
@@ -265,7 +265,31 @@
             <p>Created by <a href="">ikhsanudin</a>. | &copy; 2024.</p>
         </div>
     </footer>
-
+<!-- Modal Box item detail start -->
+<div class="modal" id="item-detail-modal">
+    <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i>
+        </a>
+        <div class="modal-content">
+            <img src="products/1.jpg" alt="Produk 1">
+            <div class="product-content">
+                <h3>Product 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque repudiandae, unde repellendus, saepe ipsum ut laboriosam veritatis,
+                     harum pariatur explicabo ea consequatur odio doloremque.</p>
+                     <div class="product-stars">
+                        <i data-feather="star" class="star-full" ></i>
+                        <i data-feather="star" class="star-full" ></i>
+                        <i data-feather="star" class="star-full" ></i>
+                        <i data-feather="star" class="star-full" ></i>
+                        <i data-feather="star" class="star-full" ></i>
+                    </div>
+                    <div class="product-price">IDR 30K <span>IDR 40K</span></div>
+                    <a href="#"><i data-feather="shopping-cart"></i><span>add to cart</span></a>
+                </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Box item detail end -->
 
     <script>
         feather.replace();

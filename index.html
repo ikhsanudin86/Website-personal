@@ -52,30 +52,23 @@
         <!-- Shopping cart start -->
 
         <div class="shopping-cart">
-            <div class="cart-item">
-                <img src="img/products/1.jpg" alt="Product 1">
-                <div class="item-detail">
-                    <h3>Product 1</h3>
-                    <div class="item-price">IDR 30K</div>
+            <template x-for="(item, index) in $store.cart.items" x-key="index">
+                <div class="cart-item">
+                    <img :src="`img/products/${item.img}`" :alt="item.name">
+                    <div class="item-detail">
+                        <h3 x-text="item.name"></h3>
+                        <div class="item-price">
+                            <span x-text="rupiah(item.price)"></span> &times;
+                            <button id="remove">&minus;</button>
+                            <span x-text="item.quantity"></span>
+                            <button id="add">&plus;</button> &equals;
+                            <span x-text="item.total"></span>
+                        </div>
+                    </div>
+                    
                 </div>
-                <i data-feather="trash-2" class="remove-item"></i>
-            </div>
-            <div class="cart-item">
-                <img src="img/products/2.jpg" alt="Product 1">
-                <div class="item-detail">
-                    <h3>Product 1</h3>
-                    <div class="item-price">IDR 30K</div>
-                </div>
-                <i data-feather="trash-2" class="remove-item"></i>
-            </div>
-            <div class="cart-item">
-                <img src="img/products/3.jpg" alt="Product 1">
-                <div class="item-detail">
-                    <h3>Product 1</h3>
-                    <div class="item-price">IDR 30K</div>
-                </div>
-                <i data-feather="trash-2" class="remove-item"></i>
-            </div>
+            </template>
+           
         </div>
         <!-- Shopping cart end -->
 
@@ -176,37 +169,16 @@
 
                     </div>
                     <div class="product-image">
-                        <img :src="`img/products/${item.products}`" :alt="item.name">
+                        <img :src="`img/products/${item.img}`" :alt="item.name">
                     </div>
                     <div class="product-content">
                         <h3 x-text="item.name"></h3>
                         <div class="product-stars">
-                            
-                                 <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-
-                                stroke-linecap="round" stroke-linejoin="round">
-
-                                <use href="img/feather-sprite.svg#star" />
-                                 </svg>
-                            
-                            
-                                 <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-
-                                stroke-linecap="round" stroke-linejoin="round">
-
-                                <use href="img/feather-sprite.svg#star" />
-                                 </svg>
-                            
-                            
-                            
-                                 <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
-
-                                stroke-linecap="round" stroke-linejoin="round">
-
-                                <use href="img/feather-sprite.svg#star" />
-                                 </svg>
-                        
-                        
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
                         </div>
                         <div class="product-price"><span x-text="rupiah(item.price)"></span>
                         </div>

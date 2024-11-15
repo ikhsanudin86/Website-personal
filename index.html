@@ -53,7 +53,7 @@
 
         <div class="shopping-cart">
             <div class="cart-item">
-                <img src="products/1.jpg" alt="Product 1">
+                <img src="img/products/1.jpg" alt="Product 1">
                 <div class="item-detail">
                     <h3>Product 1</h3>
                     <div class="item-price">IDR 30K</div>
@@ -61,7 +61,7 @@
                 <i data-feather="trash-2" class="remove-item"></i>
             </div>
             <div class="cart-item">
-                <img src="products/1.jpg" alt="Product 1">
+                <img src="imh/products/2.jpg" alt="Product 1">
                 <div class="item-detail">
                     <h3>Product 1</h3>
                     <div class="item-price">IDR 30K</div>
@@ -69,7 +69,7 @@
                 <i data-feather="trash-2" class="remove-item"></i>
             </div>
             <div class="cart-item">
-                <img src="products/1.jpg" alt="Product 1">
+                <img src="img/products/3.jpg" alt="Product 1">
                 <div class="item-detail">
                     <h3>Product 1</h3>
                     <div class="item-price">IDR 30K</div>
@@ -181,11 +181,17 @@
                     <div class="product-content">
                         <h3 x-text="item.name"></h3>
                         <div class="product-stars">
-                            <i data-feather="star" class="star-full"></i>
-                            <i data-feather="star" class="star-full"></i>
-                            <i data-feather="star" class="star-full"></i>
-                            <i data-feather="star" class="star-full"></i>
-                            <i data-feather="star" class="star-full"></i>
+                            <i>
+                                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+
+                                stroke-linecap="round" stroke-linejoin="round">
+
+                                <use href="img/feather-sprite.svg#star" />
+                                 </svg>
+                            </i>
+                            
+                            
+                        
                         </div>
                         <div class="product-price"><span x-text="rupiah(item.price)"></span>
                         </div>

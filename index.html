@@ -61,7 +61,7 @@
                 <i data-feather="trash-2" class="remove-item"></i>
             </div>
             <div class="cart-item">
-                <img src="imh/products/2.jpg" alt="Product 1">
+                <img src="img/products/2.jpg" alt="Product 1">
                 <div class="item-detail">
                     <h3>Product 1</h3>
                     <div class="item-price">IDR 30K</div>
@@ -182,7 +182,15 @@
                         <h3 x-text="item.name"></h3>
                         <div class="product-stars">
                             <i>
-                                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                 <svg width="24" height="24" fill="full" stroke="currentColor" stroke-width="2"
+
+                                stroke-linecap="round" stroke-linejoin="round">
+
+                                <use href="img/feather-sprite.svg#star" />
+                                 </svg>
+                            </i>
+                            <i>
+                                 <svg width="24" height="24" fill="full" stroke="currentColor" stroke-width="2"
 
                                 stroke-linecap="round" stroke-linejoin="round">
 
@@ -190,7 +198,14 @@
                                  </svg>
                             </i>
                             
-                            
+                            <i>
+                                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+
+                                stroke-linecap="round" stroke-linejoin="round">
+
+                                <use href="img/feather-sprite.svg#star" />
+                                 </svg>
+                            </i>
                         
                         </div>
                         <div class="product-price"><span x-text="rupiah(item.price)"></span>

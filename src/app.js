@@ -3,9 +3,11 @@ document.addEventListener('alpine:init', () => {
         items: [
             { id: 1, name: 'Roti Bakar', img: '1.jpg', price: 25000 },
             { id: 2, name: 'Burger', img: '2.jpg', price: 30000 },
-            { id: 3, name: 'Roti Bakar', img: '3.jpg', price: 25000 },
-            { id: 4, name: 'Roti Bakar', img: '4.jpg', price: 25000 },
-            { id: 5, name: 'Espreso',  img: '5.jpg', price: 25000 },
+            { id: 3, name: 'Risol Mayo', img: '3.jpg', price: 50000 },
+            { id: 4, name: 'Bolu Pandan', img: '4.jpg', price: 90000 },
+            { id: 5, name: 'Bolu Caramel',  img: '5.jpg', price: 90000 },
+            { id: 6, name: 'Desert Box Red Velvet',  img: '6.jpg', price: 50000 },
+            
 
 
         ],

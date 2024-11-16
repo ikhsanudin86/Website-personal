@@ -106,35 +106,18 @@
     <!-- About section end -->
 
     <!-- Menu Section start -->
-    <section id="menu" class="menu">
+    <section id="products" x-data="products" class="menu">
         <h2><span>Menu</span> Kami</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, tenetur!</p>
         <div class="row">
+            <template x-for="(item, index) in items" x-key="index">
             <div class="menu-card">
-                <img src="img/1.jpg" alt="Espreso" class="menu-card-img">
-                <h3 class="menu-card-title">Roti Bakar</h3>
-                <p>IDR 25K</p>
+                <img :src="`img/products/${item.img}`"   class="menu-card-img">
+                <h3 class="product-price"><span x-text="rupiah(item.price)"></span>
+                </h3>
+                <p class="product-name"><span x-text="item.name"></span></p>
             </div>
-            <div class="menu-card">
-                <img src="img/2.jpg" alt="Espreso" class="menu-card-img">
-                <h3 class="menu-card-title">Roti Bakar</h3>
-                <p>IDR 25K</p>
-            </div>
-            <div class="menu-card">
-                <img src="img/3.jpg" alt="Espreso" class="menu-card-img">
-                <h3 class="menu-card-title">Roti Bakar</h3>
-                <p>IDR 25K</p>
-            </div>
-            <div class="menu-card">
-                <img src="img/4.jpg" alt="Espreso" class="menu-card-img">
-                <h3 class="menu-card-title">Roti Bakar</h3>
-                <p>IDR 25K</p>
-            </div>
-            <div class="menu-card">
-                <img src="img/5.jpg" alt="Espreso" class="menu-card-img">
-                <h3 class="menu-card-title">Roti Bakar</h3>
-                <p>IDR 25K</p>
-            </div>
+        </template>
         </div>
 
     </section>
@@ -250,7 +233,7 @@
             <a href="#" class="close-icon"><i data-feather="x"></i>
             </a>
             <div class="modal-content">
-                <img src="img/products/1.jpg" alt="Produk 1">
+                <img src="img/1.jpg" alt="Produk 1">
                 <div class="product-content">
                     <h3>Product 1</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque repudiandae, unde

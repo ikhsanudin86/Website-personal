@@ -7,7 +7,6 @@ document.addEventListener('alpine:init', () => {
             { id: 4, name: 'Bolu Pandan', img: '4.jpg', price: 90000 },
             { id: 5, name: 'Bolu Caramel',  img: '5.jpg', price: 90000 },
             { id: 6, name: 'Desert Box Red Velvet',  img: '6.jpg', price: 50000 },
-            
 
 
         ],
@@ -71,6 +70,48 @@ document.addEventListener('alpine:init', () => {
         }
     });
 });
+
+// form validation
+const checkoutButton = document.querySelector('.checkout-button');
+checkoutButton.disabled = true;
+
+const form = document.querySelector('#checkoutForm');
+form.addEventListener('keyup', function() {
+    for (let i = 0; i < form.elements.length; i++) {
+        if (form.elements[i].value.length !== 0) {
+            checkoutButton.classList.remove('disabled');
+            checkoutButton.classList.add('disabled');
+        } else {
+            return false;
+        }
+    }
+    checkoutButton.disabled = false;
+    checkoutButton.classList.remove('disabled');
+});
+
+// Kirim data ketika Tombol Checkout di klik
+checkoutButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data = new URLSearchParams(formData);
+    const objData = Object.fromEntries(data);
+    const message = formatMessage(objData);
+    window.open('http://wa.me/6281316080129?text=' + encodeURIComponent(message));
+});
+
+// Format pesan Whatsapp
+const formatMessage = (obj) => {
+    return `Data Customer
+    Nama: ${obj.nama}
+    Email: ${obj.email}
+    No HP: ${obj.phone}
+Data Pesanan
+    ${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.total)})\n`)}
+    TOTAL: ${rupiah(obj.total)}
+    Terima kasih.` ;
+};
+
+
 
 
 //  Konversi ke Rupiah

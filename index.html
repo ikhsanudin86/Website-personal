@@ -24,7 +24,7 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-    <script src="src/app.js"></script>
+    <script src="src/app.js" async></script>
   </head>
 
   <body>
@@ -86,7 +86,9 @@
         </h4>
 
         <div class="form-container" x-show="$store.cart.items.length">
-          <form action="" id="chekoutForm">
+          <form action="" id="checkoutForm">
+            <input type="hidden" name="items" x-model="JSON.stringify($store.cart.items)">
+            <input type="hidden" name="total" x-model="$store.cart.total">
             <h5>Detail Customer</h5>
             <label for="name">
               <span>Nama</span>
@@ -94,14 +96,14 @@
             </label>
             <label for="email">
               <span>Email</span>
-              <input type="emai" name="email" id="email" autocomplete="off" />
+              <input type="email" name="email" id="email" autocomplete="off" />
             </label>
             <label for="phone">
               <span>Phone</span>
               <input type="number" name="phone" id="phone" />
             </label>
-            <button class="chekout-button" type="submit" id="chekout-button" value="chekout">
-              Chekout</button>
+            <button class="checkout-button disabled" type="submit" id="checkout-button" value="checkout">
+              Checkout</button>
           </form>
         </div>
       </div>

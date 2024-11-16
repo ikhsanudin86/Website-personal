@@ -204,7 +204,7 @@ body {
     width: 70%;
 
 }
-.form-container .chekout-button{
+.form-container .checkout-button{
     padding: 6px 14px;
     background-color: royalblue;
     color: white;
@@ -214,6 +214,11 @@ body {
     margin: 1rem auto;
     cursor: pointer;
 }
+.form-container .checkout-button.disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;

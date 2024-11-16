@@ -102,7 +102,7 @@ checkoutButton.addEventListener('click', function (e) {
 // Format pesan Whatsapp
 const formatMessage = (obj) => {
     return `Data Customer
-    Nama: ${obj.nama}
+    Nama: ${obj.name}
     Email: ${obj.email}
     No HP: ${obj.phone}
 Data Pesanan

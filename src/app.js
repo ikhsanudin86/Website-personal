@@ -92,7 +92,7 @@ form.addEventListener('keyup', function() {
 // Kirim data ketika Tombol Checkout di klik
 checkoutButton.addEventListener('click', function (e) {
     e.preventDefault();
-    const formData = new formData(form);
+    const formData = new FormData(form);
     const data = new URLSearchParams(formData);
     const objData = Object.fromEntries(data);
     const message = formatMessage(objData);
